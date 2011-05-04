@@ -7,7 +7,7 @@ bot = Cinch::Bot.new do
 
     @production = true
     c.channels = ["#skirmisher", "#megashark"]
-    c.channels = ["#skirmisher"] if @production
+    c.channels = ["#skirmisher"] unless @production
     
   end
 
