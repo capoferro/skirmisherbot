@@ -4,7 +4,11 @@ bot = Cinch::Bot.new do
   configure do |c|
     c.nick = "skirmisher"
     c.server = "skirmisher.net"
-    c.channels = ["#skirmisher"]
+
+    @production = true
+    c.channels = ["#skirmisher", "#megashark"]
+    c.channels = ["#skirmisher"] if @production
+    
   end
 
   on :message, "!up" do |m|
